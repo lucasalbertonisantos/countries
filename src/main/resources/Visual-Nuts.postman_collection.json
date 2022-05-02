@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "dc0d81b0-7e20-4ea0-bf9b-338bf5d4ad7c",
+		"name": "Visual-Nuts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1 - Number of countries in the world",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/world-countries-number",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"world-countries-number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 - The country with the most official languages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/most-official-languages?language=de",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"most-official-languages"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "de"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 - Counts all the official languages spoken in the listed countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/number-of-spoken-languages?countries=US,BE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"number-of-spoken-languages"
+					],
+					"query": [
+						{
+							"key": "countries",
+							"value": "US,BE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4 - Highest Number of Official Languages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/highest-number-of-official-languages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"highest-number-of-official-languages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5 - Most common official language(s), of all countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/most-common-languages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"most-common-languages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
