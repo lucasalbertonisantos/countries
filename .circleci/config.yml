@@ -38,11 +38,11 @@ jobs:
           name: Push-Dockerhub
           command: docker push lucasalbertoni/countries
       - run:
+          name: Logout-Dockerhub
+          command: docker logout
+      - run:
           name: Remove-File
           command: rm /home/circleci/.docker/config.json
-      - run:
-          name: Show
-          command: cat /home/circleci/.docker/config.json
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
