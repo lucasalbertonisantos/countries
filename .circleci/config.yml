@@ -32,6 +32,9 @@ jobs:
           name: Generate-Image
           command: docker build . -t lucasalbertoni/countries
       - run:
+          name: Login-Dockerhub
+          command: docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+      - run:
           name: Push-Dockerhub
           command: docker push lucasalbertoni/countries
 
