@@ -33,10 +33,13 @@ jobs:
           command: docker build . -t lucasalbertoni/countries
       - run:
           name: Login-Dockerhub
-          command: docker login -u $DOCKERHUB_USERNAME --password $DOCKERHUB_PASSWORD
+          command: echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
       - run:
           name: Push-Dockerhub
           command: docker push lucasalbertoni/countries
+      - run:
+          name: Remove-File
+          command: rm /home/circleci/.docker/config.json
       - run:
           name: Show
           command: cat /home/circleci/.docker/config.json
