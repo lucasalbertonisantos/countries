@@ -32,8 +32,8 @@ jobs:
           name: Generate-Image
           command: docker build . -t lucasalbertoni/countries
       - run:
-          name: Login-Dockerhub
-          command: echo $DOCKER_PASS | docker login --username $DOCKER_USER --password-stdin
+          name: Push-Dockerhub
+          command: docker push lucasalbertoni/countries
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
