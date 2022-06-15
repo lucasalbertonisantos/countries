@@ -20,7 +20,7 @@ jobs:
           docker_layer_caching: true
       - run:
           name: TAG
-          command: echo $CIRCLE_TAG
+          command: echo '$CIRCLE_TAG'
       - run:
           name: Generate-Image
           command: docker build . -t lucasalbertoni/countries
